@@ -1,6 +1,7 @@
+global:
+  scrape_interval: 5s
+
 scrape_configs:
-  - job_name: 'flask_app'
-    metrics_path: /metrics
+  - job_name: "flask_app"
     static_configs:
-      - targets: ['localhost:5000']
-    scrape_interval: 5s   # the default is 15
+      - targets: ["flask-app:5000"]
